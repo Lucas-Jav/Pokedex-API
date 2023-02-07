@@ -4,7 +4,7 @@
   "description": "Pokedex API",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "scss": "sass --watch scss/style.scss:css/style.css"
   },
   "author": "Lucas Oliveira",
   "license": "ISC"
