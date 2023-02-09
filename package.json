@@ -4,7 +4,7 @@
   "description": "Pokedex API",
   "main": "index.js",
   "scripts": {
-    "scss": "sass --watch scss/style.scss:css/style.css"
+    "scss": "sass --watch src/scss/style.scss:src/css/style.css"
   },
   "author": "Lucas Oliveira",
   "license": "ISC"

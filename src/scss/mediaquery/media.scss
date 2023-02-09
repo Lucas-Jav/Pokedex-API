@@ -1,0 +1,39 @@
+@media (max-width: 1880px) {
+    div.img {
+
+        img {
+            width: 22rem;
+            height: auto;
+        }
+    }
+}
+
+@media (max-width: 1124px) {
+    header.hero-1 {
+        nav {
+            gap: 70%;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    header.hero-1 {
+        nav {
+            padding-left: 30px;
+            justify-content: start;
+            p {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 363px) {
+    div.img {
+
+        img {
+            width: 320px;
+            height: auto;
+        }
+    }
+}

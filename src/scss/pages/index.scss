@@ -9,8 +9,8 @@ header.hero-1 {
 
     nav {
         display: flex;
-        justify-content: space-around;
-        gap: 100px;
+        justify-content: center;
+        gap: 900px;
         align-items: center;
         width: 100%;
         height: 100px;
@@ -21,13 +21,19 @@ header.hero-1 {
         display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 10px;
+        position: relative;
+        height: 30vh;
+        
         
         div.tag {
+            margin: 0 5px;
+            margin-top: 50px;
             width: 130px;
+            height: 50px;
             display: flex;
             flex-direction: row;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
+            gap: 0;
             align-items: center;
             background-color: #FFFFFF;
             border-radius: 244px;
@@ -36,7 +42,6 @@ header.hero-1 {
             font-family: "Montserrat", sans-serif;
             font-size: 1rem;
             letter-spacing: -0.01em;
-            margin: 0 5px;
 
             .icon {
                 width: 2rem;
@@ -57,11 +62,11 @@ header.hero-1 {
         }
 
         h1 {
+            margin-top: 20px;
             font-family: "Montserrat", sans-serif;
             text-align: center;
             font-weight: bold;
-            font-size: 3.4rem;
-            line-height: 7.8rem;
+            font-size: 3rem;
             letter-spacing: -0.01em;
             color: #FFFFFF;
             margin-bottom: 0.8rem;
@@ -69,20 +74,21 @@ header.hero-1 {
 
         p {
             font-weight: 500;
-            font-size: 1.1rem;
+            font-size: 1rem;
             line-height: 150%;
             text-align: center;
             color: #FFFFFF
         }
 
         div.img {
-            width: 500px;
+            max-width: 500px;
             height: 500px;
-            position: relative;
-        
+            position: absolute;
+            animation: uppoke 6s ease-in-out infinite ;
+            top: 100%;
+            
             img {
-                position: absolute;
-                animation: uppoke 5s infinite ;
+                max-width: 50rem;
             }
         }
     }
@@ -90,25 +96,189 @@ header.hero-1 {
 
 @keyframes uppoke {
     0% {
-        top: 100px;
+        transform: translatey(60px);
     }
-    25% {
-        top: 95px;
-    }
+    
     50% {
-        top: 90px;
+        transform: translateY(80px);
+        
     }
-    75% {
-        top: 95px;
-    }
+    
     100% {
-        top: 100px;
+        transform: translatey(60px);
     }
 }
 
 section.hero-section-1 {
     height: 30vh;
     background-color: #EFF3F6;
+    display: flex;
+    justify-content: start;
+    padding: 50px;
+    align-items: center;
+    
+        h2 {
+            
+            font-family: "Montserrat", sans-serif;
+            font-weight: 700;
+            font-size: 1.9rem;
+            letter-spacing: -0.01em;
+            color: $color-txt;
+            max-width: 26.5rem;
+        }
+}
+
+section.teste-pokemons {
+    height: 200vh;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+
+    button.poke-card {
+        height: 400px;
+        width: 280px;
+        padding: 10px;
+        border-radius: 15px;
+        background-color: #ffffff;
+        box-shadow: 0px 12px 40px -5px rgb(90 96 100 / 30%);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        cursor: pointer;
+        position: relative;
+        animation: fadeIn 1s forwards;
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateY(20px);
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                -webkit-transform: translateY(0px);
+                transform: translateY(0px);
+            }
+        }
+        
+        &:hover {
+            -webkit-box-shadow: 0px 12px 40px -5px rgb(90 96 100 / 30%);
+            box-shadow: 0px 12px 40px -5px rgb(90 96 100 / 30%);
+            bottom: 2px;
+        }
+
+        div.header-poke-card {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            height: 16.5rem;
+            
+            &::before {
+                
+                content: "";
+                width: 16.5rem;
+                height: 16.5rem;
+                border-radius: 50%;
+                position: absolute;
+                z-index: 1;
+            }
+            
+            img {
+                z-index: 2;
+            }
+        }
+
+        div.body-poke-card {
+            width: 100%;
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+
+            div.rec-card {
+
+                span {
+                    font-weight: 900;
+                    color: #727272;
+                }
+            }
+        }
+    }
+}
+
+.bug::before {
+    background-color: rgba(131, 158, 56, 0.2);
+}
+
+.dark::before {
+    background-color: rgba(61, 60, 63, 0.2);
+}
+
+.dragon::before {
+    background-color: rgba(70, 105, 153, 0.2);
+}
+
+.electric::before {
+    background-color: rgba(207, 190, 93, 0.2);
+}
+
+.fairy::before {
+    background-color: rgba(221, 138, 220, 0.2);
+}
+
+.fighting::before {
+    background-color: rgba(196, 77, 97, 0.2);
+}
+
+.fire::before {
+    background-color: #FFEBCA;
+}
+
+.flying::before {
+    background-color: rgba(158, 180, 227, 0.2);
+}
+
+.ghost::before {
+    background-color: rgba(97, 110, 183, 0.2);
+}
+
+.grass::before {
+    background-color: #D6EBDC;
+}
+
+.ground::before {
+    background-color: rgba(203, 119, 74, 0.2);
+}
+
+.ice::before {
+    background-color: rgba(124, 197, 182, 0.2);
+}
+
+.normal::before {
+    background-color: rgba(141, 141, 141, 0.2);
+}
+
+.poison::before {
+    background-color: rgba(172, 106, 202, 0.2);
+}
+
+.psychic::before {
+    background-color: rgba(235, 140, 133, 0.2);
+}
+
+.rock::before {
+    background-color: rgba(134, 203, 190, 0.2);
+}
+
+.steel::before {
+    background-color: rgba(101, 148, 161, 0.2);
+}
+
+.water::before {
+    background-color: #DFECF5;
 }
 
 
