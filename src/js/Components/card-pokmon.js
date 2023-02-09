@@ -11,7 +11,7 @@ async function fetchPokeEsp(element, id, array) {
 async function newCard(objct) {
 
     const button = document.createElement('button');
-    button.classList.add('poke-card');
+    button.classList.add('poke-card', 'headline');
     button.id = `pokemon-${objct.id}`;
 
     const header = document.createElement('div');

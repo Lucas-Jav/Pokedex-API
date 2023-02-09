@@ -9,4 +9,4 @@ async function fetchAPI() {
     console.timeEnd('map');
 }
 
-fetchAPI()
+fetchAPI();
