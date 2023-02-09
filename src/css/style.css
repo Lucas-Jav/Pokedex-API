@@ -199,6 +199,9 @@ section.teste-pokemons button.poke-card div.body-poke-card div.rec-card span {
   font-weight: 900;
   color: #727272;
 }
+section.teste-pokemons button.poke-card div.body-poke-card div.rec-card h1 {
+  font-size: 18px;
+}
 
 .bug::before {
   background-color: rgba(131, 158, 56, 0.2);
