@@ -1,12 +1,28 @@
-import { fetchPokeEsp } from "./Components/card-pokmon.js";
+import { newCard } from "./Components/card-pokmon.js";
 
-const API = 'https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0';
+async function fetchPokeEsp( id) {
+    const APIpoke = `https://pokeapi.co/api/v2/pokemon/${id}/`;
+    const response = await fetch(APIpoke).then(res => res.json());
 
-async function fetchAPI() {
-    console.time('map');
-    const response = await fetch(API).then(res => res.json());
-    response.results.forEach(fetchPokeEsp);
-    console.timeEnd('map');
+    await newCard(response);
 }
 
-fetchAPI();
+let a = 1
+let b = 12
+
+
+while (a <= b) {
+    await fetchPokeEsp(a)
+    a++
+}
+
+const morepk = document.querySelector('#morePk');
+morepk.addEventListener('click', () => {
+    a = 18
+    b = 29
+
+    while (a <= b) {
+        console.log(fetchPokeEsp(a))
+        a++
+    }
+})

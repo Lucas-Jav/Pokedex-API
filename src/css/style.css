@@ -132,7 +132,7 @@ section.hero-section-1 h2 {
 }
 
 section.teste-pokemons {
-  height: 200vh;
+  height: 100%;
   padding: 10px;
   display: flex;
   flex-wrap: wrap;
@@ -203,6 +203,49 @@ section.teste-pokemons button.poke-card div.body-poke-card div.rec-card span {
 }
 section.teste-pokemons button.poke-card div.body-poke-card div.rec-card h1 {
   font-size: 18px;
+}
+
+section.tobutton {
+  width: 100%;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+section.tobutton button {
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 15px;
+  color: #3F5DB3;
+  background-color: rgba(63, 93, 179, 0.1);
+  cursor: pointer;
+  transition: 0.8s;
+}
+section.tobutton button:hover {
+  background-color: #3F5DB3;
+  color: #FFFFFF;
+}
+
+footer.hero-1 {
+  width: 100%;
+  height: auto;
+  padding: 15px;
+  background-color: #4069BF;
+  color: #FFFFFF;
+  font-size: 22px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap-reverse;
+  gap: 15px;
+}
+footer.hero-1 a, footer.hero-1 button {
+  cursor: pointer;
+  text-align: center;
+}
+footer.hero-1 a:hover, footer.hero-1 button:hover {
+  text-decoration: underline;
 }
 
 .bug::before {

@@ -129,7 +129,7 @@ section.hero-section-1 {
 }
 
 section.teste-pokemons {
-    height: 200vh;
+    height: 100%;
     padding: 10px;
     display: flex;
     flex-wrap: wrap;
@@ -212,6 +212,52 @@ section.teste-pokemons {
 
             
             }
+        }
+    }
+}
+
+section.tobutton {
+    width: 100%;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    button {
+        border-radius: 6px;
+        font-weight: 600;
+        font-size: 1rem;
+        padding: 15px;
+        color: #3F5DB3;
+        background-color: rgba(63, 93, 179, 0.1);
+        cursor: pointer;
+        transition: 0.8s;
+
+        &:hover {
+            background-color: #3F5DB3;
+            color: #FFFFFF;
+        }
+    }
+}
+
+footer.hero-1 {
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    background-color: #4069BF;
+    color: #FFFFFF;
+    font-size: 22px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    gap: 15px;
+    
+
+    a, button {
+        cursor: pointer;
+        text-align: center;
+        &:hover {
+            text-decoration: underline;
         }
     }
 }

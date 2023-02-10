@@ -1,11 +1,3 @@
-async function fetchPokeEsp(element, id, array) {
-    const APIpoke = `https://pokeapi.co/api/v2/pokemon/${id}/`;
-    const response = await fetch(APIpoke).then(res => res.json());
-
-    await newCard(response);
-}
-
-
 
 
 async function newCard(objct) {
@@ -19,7 +11,7 @@ async function newCard(objct) {
 
     const img = document.createElement('img');
     img.width = '200';
-    img.src = objct.sprites.front_default;
+    img.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${objct.id}.png`;
     img.loading = 'lazy';
 
     const body = document.createElement('div');
@@ -48,4 +40,4 @@ async function newCard(objct) {
     descriptionPoke.append(span, h2);
 }
 
-export {fetchPokeEsp, newCard}
+export {newCard}
