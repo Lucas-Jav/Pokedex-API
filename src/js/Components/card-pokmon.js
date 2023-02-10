@@ -1,5 +1,3 @@
-
-
 async function newCard(objct) {
 
     const button = document.createElement('button');

@@ -16,13 +16,32 @@ while (a <= b) {
     a++
 }
 
+
+
 const morepk = document.querySelector('#morePk');
 morepk.addEventListener('click', () => {
-    a = 18
-    b = 29
-
-    while (a <= b) {
-        console.log(fetchPokeEsp(a))
-        a++
-    }
+    a += 0
+    b += 24
+    console.log(a, b)
+    now({a, b})
+    return a+= 24
 })
+
+
+
+function now({a,b}) {
+    let c = a
+    let d = b
+
+    while (c<= d) {
+        console.log(fetchPokeEsp(c))
+        c++
+    }
+}
+
+document.querySelector('#backtotop').addEventListener('click', () => {
+    window.scroll({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
