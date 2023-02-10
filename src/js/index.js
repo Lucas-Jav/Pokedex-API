@@ -22,7 +22,7 @@ const morepk = document.querySelector('#morePk');
 morepk.addEventListener('click', () => {
     a += 0
     b += 24
-    console.log(a, b)
+    
     now({a, b})
     return a+= 24
 })

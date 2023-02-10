@@ -1,7 +1,7 @@
 async function newCard(objct) {
 
     const button = document.createElement('button');
-    button.classList.add('poke-card', 'headline');
+    button.classList.add('poke-card');
     button.id = `pokemon-${objct.id}`;
 
     const header = document.createElement('div');
@@ -10,6 +10,7 @@ async function newCard(objct) {
     const img = document.createElement('img');
     img.width = '200';
     img.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${objct.id}.png`;
+    img.alt = `img-${objct.name}`
     img.loading = 'lazy';
 
     const body = document.createElement('div');
@@ -28,6 +29,7 @@ async function newCard(objct) {
 
     const typeImg = document.createElement('img');
     typeImg.src = `./src/image/types/${objct.types[0].type.name}.svg`;
+    typeImg.alt = `icon-${objct.types[0].type.name}`
     typeImg.width = '20';
     typeImg.loading = 'lazy';
 
