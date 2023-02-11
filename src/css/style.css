@@ -247,7 +247,7 @@ div.container div.info-poke div.modal-poke div.body-modal {
   height: 600px;
   border-radius: 16px;
   background-color: #fff;
-  border: 10px solid #a30404;
+  border: 10px inset #3A65BD;
 }
 div.container div.info-poke div.modal-poke div.body-modal div.header-modal-interno {
   width: 100%;
@@ -258,15 +258,15 @@ div.container div.info-poke div.modal-poke div.body-modal div.header-modal-inter
   justify-content: center;
   align-items: center;
   padding-right: 50px;
-  padding-top: 50px;
-  border-bottom: 6px solid #a30404;
+  padding-top: 2px;
+  border-bottom: 4px inset #3A65BD;
   overflow: hidden;
   position: relative;
 }
 div.container div.info-poke div.modal-poke div.body-modal div.header-modal-interno img.animationMew {
   position: absolute;
   top: 0;
-  animation: mew 8s ease-in-out forwards;
+  animation: mew 10s ease-in-out forwards;
 }
 @keyframes mew {
   0% {

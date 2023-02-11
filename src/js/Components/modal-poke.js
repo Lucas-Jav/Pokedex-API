@@ -1,8 +1,7 @@
 export async function fetchPokeModal(id) {
     const url = `https://pokeapi.co/api/v2/pokemon/${id}/`;
-    const API = await fetch(url).then((res) => res.json())
-    console.log(API)
-    return generateModal(API)
+    const API = await fetch(url).then((res) => res.json());
+    return generateModal(API);
 }
 
 function generateModal(api) {
@@ -17,7 +16,7 @@ function generateModal(api) {
     const btnCloseModal = document.createElement('button');
     btnCloseModal.textContent = 'X';
     btnCloseModal.addEventListener('click', () => {
-        divModal.remove()
+        divModal.remove();
         container.style.display = 'none';
     })
 
@@ -28,15 +27,30 @@ function generateModal(api) {
     headerModal.classList.add('header-modal-interno');
 
     const mewImg = document.createElement('img');
-    mewImg.src = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/151.gif';
-    mewImg.width = 40;
-    mewImg.classList.add('animationMew')
+    if (rest.id === 151) {
+        mewImg.src = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/251.gif';
+        mewImg.width = 20;
+    } else {
+        mewImg.src = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/151.gif';
+        mewImg.width = 40;
+    }
+    mewImg.classList.add('animationMew');
     mewImg.alt = 'mew-img';
-
 
     const pokeImg = document.createElement('img');
     pokeImg.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/${rest.id}.gif`;
-    pokeImg.height = 100;
+    
+    if (rest.height <= 5) pokeImg.height = rest.height * 13;
+    else if (rest.height <= 10) pokeImg.height = rest.height * 7;
+    else if (rest.height < 15) pokeImg.height = rest.height * 6.8;
+    else if (rest.height < 20) pokeImg.height = rest.height * 5.5;
+    else if (rest.height <= 25) pokeImg.height = rest.height * 4.5;
+    else if (rest.height <= 40) pokeImg.height = rest.height * 3.5;
+    else if (rest.height <= 50) pokeImg.height = rest.height * 3;
+    else if (rest.height <= 60) pokeImg.height = rest.height * 2.8;
+    else if (rest.height < 110) pokeImg.height = rest.height * 1.8;
+    else if (rest.height >= 110) pokeImg.height = rest.height * 1.2;
+    
     pokeImg.alt = `img-${rest.name}`;
 
     const bodyInterno = document.createElement('div');
@@ -58,9 +72,9 @@ function generateModal(api) {
     rest.types.forEach(res => {
         const spanType = document.createElement('span');
         spanType.textContent = res.type.name;
-        spanType.classList.add(`sp-${res.type.name}`)
+        spanType.classList.add(`sp-${res.type.name}`);
 
-        return h1Name.appendChild(spanType)
+        return h1Name.appendChild(spanType);
     });
 
     const imgType = document.createElement('img');
@@ -78,16 +92,16 @@ function generateModal(api) {
     spanHeight.textContent = `${rest.height / 10}m`;
 
     const pHeight = document.createElement('p');
-    pHeight.textContent = 'Height'
-    divHeight.append(pHeight, spanHeight)
+    pHeight.textContent = 'Height';
+    divHeight.append(pHeight, spanHeight);
 
     const divWeight = document.createElement('div');
     divWeight.classList.add('weight-poke');
-    const pWeight = document.createElement('p')
+    const pWeight = document.createElement('p');
     pWeight.textContent = 'Weight';
     const spanWeight = document.createElement('span');
     spanWeight.textContent = `${rest.weight / 10}kg`;
-    divWeight.append(pWeight, spanWeight)
+    divWeight.append(pWeight, spanWeight);
 
     const divAbilities = document.createElement('div');
     divAbilities.classList.add('abilities-poke');
@@ -95,7 +109,7 @@ function generateModal(api) {
     pAbilities.textContent = 'Abilities';
     const spanAbilities = document.createElement('span');
     spanAbilities.textContent = rest.abilities[0].ability.name
-    divAbilities.append(pAbilities, spanAbilities)
+    divAbilities.append(pAbilities, spanAbilities);
         
     const divFr = document.createElement('div');
     divFr.classList.add('fraquezas');
@@ -103,21 +117,30 @@ function generateModal(api) {
     const h2Fr = document.createElement('h2');
     h2Fr.textContent = 'Weaknesses';
 
-    const divGroupF = document.createElement('div')
+    const divGroupF = document.createElement('div');
     divGroupF.classList.add('group-fra');
+
+    const typeArr = [];
 
     rest.types.forEach(async (res) => {
         const url = `https://pokeapi.co/api/v2/type/${res.type.name}`;
-        const api = await fetch(url).then(res => res.json())
+        const api = await fetch(url).then(res => res.json());
         
         api.damage_relations.double_damage_from.forEach(type => {
-            const spanNoT = document.createElement('span')
-            spanNoT.textContent = type.name;
-            spanNoT.classList.add(`sp-${type.name}`)
+            
+            if (typeArr.includes(type.name)){
+                return typeArr;
+            } else {
+                typeArr.push(type.name);
+                const spanNoT = document.createElement('span');
+                spanNoT.textContent = type.name;
+                spanNoT.classList.add(`sp-${type.name}`);
 
-            return divGroupF.appendChild(spanNoT);
+                return divGroupF.appendChild(spanNoT);
+            };
         });
     });
+    
 
     container.appendChild(divModal);
     divModal.append(btnCloseModal, bodyModal);

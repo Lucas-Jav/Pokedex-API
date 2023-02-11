@@ -9,7 +9,6 @@ async function newCard(objct) {
 
     button.addEventListener('click', (ev) => {
         const Poke = ev.currentTarget.dataset.pokeId;
-        console.log(Poke)
         fetchPokeModal(Poke);
     })
 
@@ -21,6 +20,16 @@ async function newCard(objct) {
     img.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${objct.id}.png`;
     img.alt = `img-${objct.name}`
     img.loading = 'lazy';
+
+    button.addEventListener('mouseenter', () => {
+        img.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/${objct.id}.gif`;
+        img.width = '120';
+    })
+
+    button.addEventListener('mouseleave', () => {
+        img.width = '200';
+        img.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${objct.id}.png`;
+    })
 
     const body = document.createElement('div');
     body.classList.add('body-poke-card');
