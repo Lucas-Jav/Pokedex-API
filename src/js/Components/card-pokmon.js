@@ -1,8 +1,17 @@
+import { fetchPokeModal } from "./modal-poke.js";
+
 async function newCard(objct) {
 
     const button = document.createElement('button');
     button.classList.add('poke-card');
     button.id = `pokemon-${objct.id}`;
+    button.dataset.pokeId = objct.id;
+
+    button.addEventListener('click', (ev) => {
+        const Poke = ev.currentTarget.dataset.pokeId;
+        console.log(Poke)
+        fetchPokeModal(Poke);
+    })
 
     const header = document.createElement('div');
     header.classList.add('header-poke-card', objct.types[0].type.name);
