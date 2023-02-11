@@ -75,10 +75,8 @@ function generateModal(api) {
     divHeight.classList.add('height-poke')
 
     const spanHeight = document.createElement('span');
+    spanHeight.textContent = `${rest.height / 10}m`;
 
-    if (rest.height < 10) spanHeight.textContent = `0.${rest.height}m`;
-    if (rest.height > 10) spanHeight.textContent = `${rest.height}m`;
-    
     const pHeight = document.createElement('p');
     pHeight.textContent = 'Height'
     divHeight.append(pHeight, spanHeight)
@@ -88,7 +86,7 @@ function generateModal(api) {
     const pWeight = document.createElement('p')
     pWeight.textContent = 'Weight';
     const spanWeight = document.createElement('span');
-    spanWeight.textContent = `${rest.weight}kg`;
+    spanWeight.textContent = `${rest.weight / 10}kg`;
     divWeight.append(pWeight, spanWeight)
 
     const divAbilities = document.createElement('div');
