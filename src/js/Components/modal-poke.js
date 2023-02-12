@@ -77,10 +77,20 @@ function generateModal(api) {
         return h1Name.appendChild(spanType);
     });
 
-    const imgType = document.createElement('img');
-    imgType.src = `./src/image/types/${rest.types[0].type.name}.svg`;
-    imgType.alt = `icon-${rest.types[0].type.name}`;
-    imgType.width = '20';
+    const groupType = document.createElement('div');
+    groupType.classList.add('typeGp');
+
+    rest.types.forEach((i) => {
+        const imgType = document.createElement('img');
+        imgType.src = `./src/image/types/${i.type.name}.svg`;
+        imgType.alt = `icon-${i.type.name}`;
+        imgType.width = '20';
+
+        return groupType.appendChild(imgType);
+    })
+
+
+    
 
     const divEstt = document.createElement('div');
     divEstt.classList.add('more-infos');
@@ -147,7 +157,7 @@ function generateModal(api) {
     bodyModal.append(headerModal, bodyInterno);
     headerModal.append(mewImg ,pokeImg);
     bodyInterno.append(descriptionModal, divEstt, divFr);
-    descriptionModal.append(divToDesc, imgType);
+    descriptionModal.append(divToDesc, groupType);
     divToDesc.append(spanNumber, h1Name);
     divEstt.append(divHeight, divWeight, divAbilities);
     divFr.append(h2Fr, divGroupF);

@@ -207,6 +207,10 @@ section.teste-pokemons button.poke-card div.body-poke-card div.rec-card h1 {
 section.teste-pokemons button.poke-card div.body-poke-card div.rec-card h1::first-letter {
   text-transform: uppercase;
 }
+section.teste-pokemons button.poke-card div.body-poke-card div.typeGp {
+  display: flex;
+  gap: 8px;
+}
 
 div.container {
   width: 100%;
@@ -291,7 +295,7 @@ div.container div.info-poke div.modal-poke div.body-modal div.body-modal-interno
   color: #727272;
 }
 div.container div.info-poke div.modal-poke div.body-modal div.body-modal-interno div.description-modal div h1 {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 700;
 }
 div.container div.info-poke div.modal-poke div.body-modal div.body-modal-interno div.description-modal div h1::first-letter {
@@ -304,6 +308,10 @@ div.container div.info-poke div.modal-poke div.body-modal div.body-modal-interno
 }
 div.container div.info-poke div.modal-poke div.body-modal div.body-modal-interno div.description-modal div h1 span::first-letter {
   text-transform: uppercase;
+}
+div.container div.info-poke div.modal-poke div.body-modal div.body-modal-interno div.typeGp {
+  display: flex;
+  gap: 5px;
 }
 div.container div.info-poke div.modal-poke div.body-modal div.more-infos {
   width: 100%;
@@ -331,6 +339,11 @@ div.container div.info-poke div.modal-poke div.body-modal div.more-infos div.wei
 div.container div.info-poke div.modal-poke div.body-modal div.more-infos div.height-poke span {
   font-weight: 600;
   font-size: 14px;
+}
+div.container div.info-poke div.modal-poke div.body-modal div.more-infos div.abilities-poke span::first-letter,
+div.container div.info-poke div.modal-poke div.body-modal div.more-infos div.weight-poke span::first-letter,
+div.container div.info-poke div.modal-poke div.body-modal div.more-infos div.height-poke span::first-letter {
+  text-transform: uppercase;
 }
 div.container div.info-poke div.modal-poke div.fraquezas {
   width: 100%;

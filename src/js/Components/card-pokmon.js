@@ -45,16 +45,23 @@ async function newCard(objct) {
     const h2 = document.createElement('h1');
     h2.textContent = objct.name;
 
-    const typeImg = document.createElement('img');
-    typeImg.src = `./src/image/types/${objct.types[0].type.name}.svg`;
-    typeImg.alt = `icon-${objct.types[0].type.name}`
-    typeImg.width = '20';
-    typeImg.loading = 'lazy';
+    const groupType = document.createElement('div');
+    groupType.classList.add('typeGp')
 
+    objct.types.forEach(i => {
+        const typeImg = document.createElement('img');
+        typeImg.src = `./src/image/types/${i.type.name}.svg`;
+        typeImg.alt = `icon-${i.type.name}`
+        typeImg.width = '20';
+        typeImg.loading = 'lazy';
+
+        groupType.appendChild(typeImg);
+    });
+    
     document.querySelector('.teste-pokemons').appendChild(button);
     button.append(header, body);
     header.appendChild(img);
-    body.append(descriptionPoke, typeImg);
+    body.append(descriptionPoke, groupType);
     descriptionPoke.append(span, h2);
 }
 

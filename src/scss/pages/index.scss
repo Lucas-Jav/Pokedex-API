@@ -213,8 +213,11 @@ section.teste-pokemons {
                         text-transform: uppercase;
                     }
                 }
+            }
 
-            
+            div.typeGp {
+                display: flex;
+                gap: 8px;
             }
         }
     }
@@ -306,8 +309,9 @@ div.container {
                                 color: #727272;
                             }
                             h1 {
-                                font-size: 22px;
+                                font-size: 20px;
                                 font-weight: 700;
+                                
                                 
                                 
                                 &::first-letter {
@@ -319,6 +323,7 @@ div.container {
                                     border-radius: 3px;
                                     padding: 5px;
                                     
+                                    
 
                                     &::first-letter {
                                         text-transform: uppercase;
@@ -326,6 +331,11 @@ div.container {
                                 }
                             }
                         }
+                    }
+
+                    div.typeGp {
+                        display: flex;
+                        gap: 5px;
                     }
                 }
 
@@ -351,6 +361,10 @@ div.container {
                         span {
                             font-weight: 600;
                             font-size: 14px;
+
+                            &::first-letter {
+                                text-transform: uppercase;
+                            }
                         }
                     }
                 }

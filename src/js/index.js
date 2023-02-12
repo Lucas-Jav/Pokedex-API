@@ -11,28 +11,28 @@ let a = 1
 let b = 12
 
 while (a <= b) {
-    await fetchPokeEsp(a)
+    await fetchPokeEsp(a);
     a++
 }
 
 const morepk = document.querySelector('#morePk');
 morepk.addEventListener('click', () => {
-    a += 0
-    b += 24
+    a += 0;
+    b += 24;
     
-    now({a, b})
-    return a+= 24
-})
+    now({a, b});
+    return a+= 24;
+});
 
 function now({a,b}) {
-    let c = a
-    let d = b
+    let c = a;
+    let d = b;
 
     while (c<= d) {
-        fetchPokeEsp(c)
+        fetchPokeEsp(c);
         c++
-    }
-}
+    };
+};
 
 document.querySelector('#backtotop').addEventListener('click', () => {
     window.scroll({
