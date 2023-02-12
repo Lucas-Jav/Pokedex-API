@@ -218,7 +218,7 @@ div.container {
   position: relative;
 }
 div.container div.info-poke {
-  display: none;
+  display: none; /* none */
   position: fixed;
   width: 100vw;
   height: 100vh;
@@ -248,14 +248,14 @@ div.container div.info-poke div.modal-poke button {
 }
 div.container div.info-poke div.modal-poke div.body-modal {
   width: 500px;
-  height: 600px;
+  /* height: 600px; */
   border-radius: 16px;
   background-color: #fff;
   border: 10px inset #3A65BD;
 }
 div.container div.info-poke div.modal-poke div.body-modal div.header-modal-interno {
   width: 100%;
-  height: 40%;
+  height: 180px;
   border-radius: inherit;
   background-image: url("https://i.pinimg.com/564x/a8/34/af/a834afbaa0de63124cf577735444c29c.jpg");
   display: flex;
@@ -282,6 +282,8 @@ div.container div.info-poke div.modal-poke div.body-modal div.header-modal-inter
 }
 div.container div.info-poke div.modal-poke div.body-modal div.body-modal-interno {
   padding: 10px;
+  height: auto;
+  padding-bottom: 20px;
 }
 div.container div.info-poke div.modal-poke div.body-modal div.body-modal-interno div.description-modal {
   width: 100%;
@@ -312,6 +314,46 @@ div.container div.info-poke div.modal-poke div.body-modal div.body-modal-interno
 div.container div.info-poke div.modal-poke div.body-modal div.body-modal-interno div.typeGp {
   display: flex;
   gap: 5px;
+}
+div.container div.info-poke div.modal-poke div.body-modal div.body-modal-interno div.status-info {
+  margin-top: 20px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+div.container div.info-poke div.modal-poke div.body-modal div.body-modal-interno div.status-info h2 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #4d4c4c;
+  margin-bottom: 10px;
+}
+div.container div.info-poke div.modal-poke div.body-modal div.body-modal-interno div.status-info div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+@media (max-width: 382px) {
+  div.container div.info-poke div.modal-poke div.body-modal div.body-modal-interno div.status-info div {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+div.container div.info-poke div.modal-poke div.body-modal div.body-modal-interno div.status-info div p {
+  font-size: 14px;
+  font-weight: 600;
+  color: #080808;
+}
+div.container div.info-poke div.modal-poke div.body-modal div.body-modal-interno div.status-info div progress {
+  width: 60%;
+  accent-color: #3A65BD;
+}
+@media (max-width: 382px) {
+  div.container div.info-poke div.modal-poke div.body-modal div.body-modal-interno div.status-info div progress {
+    width: 100%;
+  }
 }
 div.container div.info-poke div.modal-poke div.body-modal div.more-infos {
   width: 100%;
@@ -419,7 +461,9 @@ footer.hero-1 a:hover, footer.hero-1 button:hover {
   }
   div.modal-poke div.body-modal {
     width: 100% !important;
-    height: 450px !important;
+    height: 500px !important;
+    overflow: hidden;
+    overflow-y: scroll;
   }
 }
 .bug::before {

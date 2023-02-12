@@ -150,16 +150,39 @@ function generateModal(api) {
             };
         });
     });
+
+    const divStats = document.createElement('div');
+    divStats.classList.add('status-info');
+
+    const h2Stats = document.createElement('h2');
+    h2Stats.textContent = 'Stats';
     
+    divStats.append(h2Stats);
+
+    rest.stats.forEach( i => {
+        const divM = document.createElement('div');
+        divM.classList.add(i.stat.name);
+
+        const pType = document.createElement('p');
+        pType.textContent = i.stat.name;
+
+        const progressBar = document.createElement('progress');
+        progressBar.max = '100';
+        progressBar.value = i.base_stat;
+        progressBar.textContent = i.base_stat;
+
+        divM.append(pType, progressBar);
+        divStats.appendChild(divM);
+    });
 
     container.appendChild(divModal);
     divModal.append(btnCloseModal, bodyModal);
     bodyModal.append(headerModal, bodyInterno);
     headerModal.append(mewImg ,pokeImg);
-    bodyInterno.append(descriptionModal, divEstt, divFr);
+    bodyInterno.append(descriptionModal, divEstt, divFr, divStats);
     descriptionModal.append(divToDesc, groupType);
     divToDesc.append(spanNumber, h1Name);
     divEstt.append(divHeight, divWeight, divAbilities);
     divFr.append(h2Fr, divGroupF);
-}
+};
 

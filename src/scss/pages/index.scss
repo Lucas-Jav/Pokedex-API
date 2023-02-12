@@ -228,7 +228,7 @@ div.container {
     height: 100%;
     position: relative;
     div.info-poke {
-        display: none;
+        display: none; /* none */
         position: fixed;
         width: 100vw;
         height: 100vh;
@@ -260,16 +260,17 @@ div.container {
 
             div.body-modal {
                 width: 500px;
-                height: 600px;
+                /* height: 600px; */
                 border-radius: 16px;
                 background-color: #fff;
                 border: 10px inset #3A65BD;
 
                 div.header-modal-interno {
                     width: 100%;
-                    height: 40%;
+                    height: 180px;
                     border-radius: inherit;
                     background-image: url('https://i.pinimg.com/564x/a8/34/af/a834afbaa0de63124cf577735444c29c.jpg');
+                    
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -297,11 +298,15 @@ div.container {
 
                 div.body-modal-interno{
                     padding: 10px;
+                    height: auto;
+                    padding-bottom: 20px;
+                    
                     div.description-modal { 
                         width: 100%;
                         display: flex;
                         align-items: end;
                         justify-content: space-between;
+                        
                         div {
                             span {
                                 font-size: 14px;
@@ -336,6 +341,51 @@ div.container {
                     div.typeGp {
                         display: flex;
                         gap: 5px;
+                    }
+
+                    div.status-info {
+                        margin-top: 20px;
+                        width: 100%;
+                        height: auto;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 5px;
+
+                        h2 {
+                            font-size: 14px;
+                            font-weight: 600;
+                            color: #4d4c4c;
+                            margin-bottom: 10px;
+                        }
+            
+                        div {
+                            
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            width: 100%;
+                            
+                            @media (max-width: 382px) {
+                                flex-direction: column;
+                                gap: 5px;
+            
+                            }
+            
+                            p {
+                                font-size: 14px;
+                                font-weight: 600;
+                                color: #080808;
+                            }
+            
+                            progress {
+                                width: 60%;
+                                accent-color: #3A65BD;
+            
+                                @media (max-width: 382px) {
+                                    width: 100%;
+                                }
+                            }
+                        }
                     }
                 }
 
@@ -397,7 +447,6 @@ div.container {
                 }
             }
         }
-        
     }
 }
 
@@ -454,7 +503,9 @@ footer.hero-1 {
 
         div.body-modal {
             width: 100% !important;
-            height: 450px !important;
+            height: 500px !important;
+            overflow: hidden;
+            overflow-y: scroll;
         }
     }
 }
