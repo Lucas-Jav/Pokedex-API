@@ -235,6 +235,15 @@ div.container div.info-poke div.modal-poke {
   flex-direction: column;
   align-items: end;
   gap: 5px;
+  animation: fadein 1s forwards;
+}
+@keyframes fadein {
+  0% {
+    transform: translateY(800px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 div.container div.info-poke div.modal-poke button {
   width: 20px;
