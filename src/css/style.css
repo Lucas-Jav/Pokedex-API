@@ -183,9 +183,20 @@ section.teste-pokemons button.poke-card div.header-poke-card::before {
   content: "";
   width: 16.5rem;
   height: 16.5rem;
-  border-radius: 50%;
   position: absolute;
   z-index: 1;
+  border: 4em solid;
+  padding-bottom: 10em;
+  border-radius: 100%;
+  clip-path: polygon(0px 0px, 0px 40%, 50% 40%, 50% 60%, 0px 60%, 0px 100%, 100% 100%, 100% 60%, 50% 60%, 50% 40%, 100% 40%, 100% 0px);
+}
+section.teste-pokemons button.poke-card div.header-poke-card::after {
+  width: 5em;
+  content: "";
+  position: absolute;
+  padding-bottom: 5em;
+  border-radius: 100%;
+  background-color: currentColor;
 }
 section.teste-pokemons button.poke-card div.header-poke-card img {
   z-index: 2;
@@ -453,7 +464,7 @@ footer.hero-1 {
   padding: 15px;
   background-color: #4069BF;
   color: #FFFFFF;
-  font-size: 22px;
+  font-size: 20px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -479,76 +490,76 @@ footer.hero-1 a:hover, footer.hero-1 button:hover {
     overflow-y: scroll;
   }
 }
-.bug::before {
-  background-color: rgba(131, 158, 56, 0.2);
+.bug::before, .bug::after {
+  color: rgba(131, 158, 56, 0.2);
 }
 
-.dark::before {
-  background-color: rgba(61, 60, 63, 0.2);
+.dark::before, .dark::after {
+  color: rgba(61, 60, 63, 0.2);
 }
 
-.dragon::before {
-  background-color: rgba(70, 105, 153, 0.2);
+.dragon::before, .dragon::after {
+  color: rgba(70, 105, 153, 0.2);
 }
 
-.electric::before {
-  background-color: rgba(207, 190, 93, 0.2);
+.electric::before, .electric::after {
+  color: rgba(207, 190, 93, 0.2);
 }
 
-.fairy::before {
-  background-color: rgba(221, 138, 220, 0.2);
+.fairy::before, .fairy::after {
+  color: rgba(221, 138, 220, 0.2);
 }
 
-.fighting::before {
-  background-color: rgba(196, 77, 97, 0.2);
+.fighting::before, .fighting::after {
+  color: rgba(196, 77, 97, 0.2);
 }
 
-.fire::before {
-  background-color: #FFEBCA;
+.fire::before, .fire::after {
+  color: #FFEBCA;
 }
 
-.flying::before {
-  background-color: rgba(158, 180, 227, 0.2);
+.flying::before, .flying::after {
+  color: rgba(158, 180, 227, 0.2);
 }
 
-.ghost::before {
-  background-color: rgba(97, 110, 183, 0.2);
+.ghost::before, .ghost::after {
+  color: rgba(97, 110, 183, 0.2);
 }
 
-.grass::before {
-  background-color: #D6EBDC;
+.grass::before, .grass::after {
+  color: #D6EBDC;
 }
 
-.ground::before {
-  background-color: rgba(203, 119, 74, 0.2);
+.ground::before, .ground::after {
+  color: rgba(203, 119, 74, 0.2);
 }
 
-.ice::before {
-  background-color: rgba(124, 197, 182, 0.2);
+.ice::before, .ice::after {
+  color: rgba(124, 197, 182, 0.2);
 }
 
-.normal::before {
-  background-color: rgba(141, 141, 141, 0.2);
+.normal::before, .normal::after {
+  color: rgba(141, 141, 141, 0.2);
 }
 
-.poison::before {
-  background-color: rgba(172, 106, 202, 0.2);
+.poison::before, .poison::after {
+  color: rgba(172, 106, 202, 0.2);
 }
 
-.psychic::before {
-  background-color: rgba(235, 140, 133, 0.2);
+.psychic::before, .psychic::after {
+  color: rgba(235, 140, 133, 0.2);
 }
 
-.rock::before {
-  background-color: rgba(134, 203, 190, 0.2);
+.rock::before, .rock::after {
+  color: rgba(134, 203, 190, 0.2);
 }
 
-.steel::before {
-  background-color: rgba(101, 148, 161, 0.2);
+.steel::before, .steel::after {
+  color: rgba(101, 148, 161, 0.2);
 }
 
-.water::before {
-  background-color: #DFECF5;
+.water::before, .water::after {
+  color: #DFECF5;
 }
 
 .sp-bug {

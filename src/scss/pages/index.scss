@@ -183,9 +183,21 @@ section.teste-pokemons {
                 content: "";
                 width: 16.5rem;
                 height: 16.5rem;
-                border-radius: 50%;
                 position: absolute;
                 z-index: 1;
+                border: 4em solid;
+                padding-bottom: 10em;
+                border-radius: 100%;
+                clip-path: polygon(0px 0px, 0px 40%, 50% 40%, 50% 60%, 0px 60%, 0px 100%, 100% 100%, 100% 60%, 50% 60%, 50% 40%, 100% 40%, 100% 0px);
+            }
+
+            &::after {
+                width: 5em;
+                content: "";
+                position: absolute;
+                padding-bottom: 5em;
+                border-radius: 100%;
+                background-color: currentColor;
             }
             
             img {
@@ -281,7 +293,6 @@ div.container {
                     height: 180px;
                     border-radius: inherit;
                     background-image: url('https://i.pinimg.com/564x/a8/34/af/a834afbaa0de63124cf577735444c29c.jpg');
-                    
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -495,7 +506,7 @@ footer.hero-1 {
     padding: 15px;
     background-color: #4069BF;
     color: #FFFFFF;
-    font-size: 22px;
+    font-size: 20px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -525,164 +536,5 @@ footer.hero-1 {
     }
 }
 
-.bug::before {
-    background-color: rgba(131, 158, 56, 0.2);
-}
 
-.dark::before {
-    background-color: rgba(61, 60, 63, 0.2);
-}
 
-.dragon::before {
-    background-color: rgba(70, 105, 153, 0.2);
-}
-
-.electric::before {
-    background-color: rgba(207, 190, 93, 0.2);
-}
-
-.fairy::before {
-    background-color: rgba(221, 138, 220, 0.2);
-}
-
-.fighting::before {
-    background-color: rgba(196, 77, 97, 0.2);
-}
-
-.fire::before {
-    background-color: #FFEBCA;
-}
-
-.flying::before {
-    background-color: rgba(158, 180, 227, 0.2);
-}
-
-.ghost::before {
-    background-color: rgba(97, 110, 183, 0.2);
-}
-
-.grass::before {
-    background-color: #D6EBDC;
-}
-
-.ground::before {
-    background-color: rgba(203, 119, 74, 0.2);
-}
-
-.ice::before {
-    background-color: rgba(124, 197, 182, 0.2);
-}
-
-.normal::before {
-    background-color: rgba(141, 141, 141, 0.2);
-}
-
-.poison::before {
-    background-color: rgba(172, 106, 202, 0.2);
-}
-
-.psychic::before {
-    background-color: rgba(235, 140, 133, 0.2);
-}
-
-.rock::before {
-    background-color: rgba(134, 203, 190, 0.2);
-}
-
-.steel::before {
-    background-color: rgba(101, 148, 161, 0.2);
-}
-
-.water::before {
-    background-color: #DFECF5;
-}
-
-.sp-bug{
-    background-color: rgba(156, 186, 72, 0.1);
-    color: #9BBA48 !important;
-}
-
-.sp-dark {
-    background-color: rgba(89, 87, 97, 0.1);
-    color: #595761 !important;
-}
-
-.sp-dragon{
-    background-color: rgba(44, 106, 193, 0.1);
-    color: #2C6AC1 !important;
-}
-
-.sp-electric{
-    background-color: rgba(245, 209, 5, 0.1);
-    color: #D4BC34 !important;
-}
-
-.sp-fairy {
-    background-color: rgba(226, 150, 225, 0.1);
-    color: #E296E1 !important;
-}
-
-.sp-fighting {
-    background-color: rgba(196, 79, 99, 0.24);
-    color: #C44D61 !important;
-}
-
-.sp-fire {
-    background-color: rgba(233, 99, 3, 0.1);
-    color: #E96303 !important;
-}
-
-.sp-flying{
-    background-color: rgba(117, 140, 189, 0.1);
-    color: #758CBD !important;
-}
-
-.sp-ghost {
-    background-color: rgba(97, 110, 183, 0.1);
-    color: #616EB7 !important;
-}
-
-.sp-grass {
-    background-color: rgba(114, 184, 97, 0.1);
-    color: #73B861 !important;
-}
-
-.sp-ground{
-    background-color: rgba(206, 128, 86, 0.1);
-    color: #CE8056 !important;
-}
-
-.sp-ice {
-    background-color: rgba(113, 186, 171, 0.1);
-    color: #71BAAC !important;
-}
-
-.sp-normal {
-    background-color: rgba(144, 144, 144, 0.1);
-    color: #909090 !important;
-}
-
-.sp-poison {
-    background-color: rgba(172, 106, 202, 0.1);
-    color: #AC6ACA !important;
-}
-
-.sp-psychic {
-    background-color: rgba(235, 139, 132, 0.1);
-    color: #EB8B85 !important;
-}
-
-.sp-rock{
-    background-color: rgba(132, 190, 179, 0.1);
-    color: #84BEB3 !important;
-}
-
-.sp-steel{
-    background-color: rgba(101, 148, 161, 0.1);
-    color: #6594A1 !important;
-}
-
-.sp-water {
-    background-color: rgba(79, 120, 190, 0.1);
-    color: #4F77BE !important;
-}

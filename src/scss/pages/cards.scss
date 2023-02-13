@@ -1,0 +1,163 @@
+.bug::before, .bug::after {
+    color: rgba(131, 158, 56, 0.2);
+}
+
+.dark::before, .dark::after{
+    color: rgba(61, 60, 63, 0.2);
+}
+
+.dragon::before, .dragon::after {
+    color: rgba(70, 105, 153, 0.2);
+}
+
+.electric::before, .electric::after {
+    color: rgba(207, 190, 93, 0.2);
+}
+
+.fairy::before, .fairy::after {
+    color: rgba(221, 138, 220, 0.2);
+}
+
+.fighting::before, .fighting::after{
+    color: rgba(196, 77, 97, 0.2);
+}
+
+.fire::before, .fire::after {
+    color: #FFEBCA;
+}
+
+.flying::before, .flying::after {
+    color: rgba(158, 180, 227, 0.2);
+}
+
+.ghost::before, .ghost::after {
+    color: rgba(97, 110, 183, 0.2);
+}
+
+.grass::before, .grass::after {
+    color: #D6EBDC;
+}
+
+.ground::before, .ground::after {
+    color: rgba(203, 119, 74, 0.2);
+}
+
+.ice::before, .ice::after {
+    color: rgba(124, 197, 182, 0.2);
+}
+
+.normal::before, .normal::after {
+    color: rgba(141, 141, 141, 0.2);
+}
+
+.poison::before, .poison::after {
+    color: rgba(172, 106, 202, 0.2);
+}
+
+.psychic::before, .psychic::after {
+    color: rgba(235, 140, 133, 0.2);
+}
+
+.rock::before, .rock::after {
+    color: rgba(134, 203, 190, 0.2);
+}
+
+.steel::before, .steel::after {
+    color: rgba(101, 148, 161, 0.2);
+}
+
+.water::before, .water::after  {
+    color: #DFECF5;
+}
+
+
+
+.sp-bug{
+    background-color: rgba(156, 186, 72, 0.1);
+    color: #9BBA48 !important;
+}
+
+.sp-dark {
+    background-color: rgba(89, 87, 97, 0.1);
+    color: #595761 !important;
+}
+
+.sp-dragon{
+    background-color: rgba(44, 106, 193, 0.1);
+    color: #2C6AC1 !important;
+}
+
+.sp-electric{
+    background-color: rgba(245, 209, 5, 0.1);
+    color: #D4BC34 !important;
+}
+
+.sp-fairy {
+    background-color: rgba(226, 150, 225, 0.1);
+    color: #E296E1 !important;
+}
+
+.sp-fighting {
+    background-color: rgba(196, 79, 99, 0.24);
+    color: #C44D61 !important;
+}
+
+.sp-fire {
+    background-color: rgba(233, 99, 3, 0.1);
+    color: #E96303 !important;
+}
+
+.sp-flying{
+    background-color: rgba(117, 140, 189, 0.1);
+    color: #758CBD !important;
+}
+
+.sp-ghost {
+    background-color: rgba(97, 110, 183, 0.1);
+    color: #616EB7 !important;
+}
+
+.sp-grass {
+    background-color: rgba(114, 184, 97, 0.1);
+    color: #73B861 !important;
+}
+
+.sp-ground{
+    background-color: rgba(206, 128, 86, 0.1);
+    color: #CE8056 !important;
+}
+
+.sp-ice {
+    background-color: rgba(113, 186, 171, 0.1);
+    color: #71BAAC !important;
+}
+
+.sp-normal {
+    background-color: rgba(144, 144, 144, 0.1);
+    color: #909090 !important;
+}
+
+.sp-poison {
+    background-color: rgba(172, 106, 202, 0.1);
+    color: #AC6ACA !important;
+}
+
+.sp-psychic {
+    background-color: rgba(235, 139, 132, 0.1);
+    color: #EB8B85 !important;
+}
+
+.sp-rock{
+    background-color: rgba(132, 190, 179, 0.1);
+    color: #84BEB3 !important;
+}
+
+.sp-steel{
+    background-color: rgba(101, 148, 161, 0.1);
+    color: #6594A1 !important;
+}
+
+.sp-water {
+    background-color: rgba(79, 120, 190, 0.1);
+    color: #4F77BE !important;
+}
