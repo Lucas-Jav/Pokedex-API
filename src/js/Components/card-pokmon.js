@@ -10,7 +10,7 @@ async function newCard(objct) {
     button.addEventListener('click', (ev) => {
         const Poke = ev.currentTarget.dataset.pokeId;
         fetchPokeModal(Poke);
-    })
+    });
 
     const header = document.createElement('div');
     header.classList.add('header-poke-card', objct.types[0].type.name);
@@ -24,12 +24,12 @@ async function newCard(objct) {
     button.addEventListener('mouseenter', () => {
         img.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/${objct.id}.gif`;
         img.width = '120';
-    })
+    });
 
     button.addEventListener('mouseleave', () => {
         img.width = '200';
         img.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${objct.id}.png`;
-    })
+    });
 
     const body = document.createElement('div');
     body.classList.add('body-poke-card');
@@ -46,7 +46,7 @@ async function newCard(objct) {
     h2.textContent = objct.name;
 
     const groupType = document.createElement('div');
-    groupType.classList.add('typeGp')
+    groupType.classList.add('typeGp');
 
     objct.types.forEach(i => {
         const typeImg = document.createElement('img');
@@ -63,6 +63,6 @@ async function newCard(objct) {
     header.appendChild(img);
     body.append(descriptionPoke, groupType);
     descriptionPoke.append(span, h2);
-}
+};
 
 export {newCard}

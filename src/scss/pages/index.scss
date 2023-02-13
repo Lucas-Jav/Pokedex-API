@@ -238,6 +238,7 @@ div.container {
         /* display: flex; */
         justify-content: center;
         align-items: center;
+        padding-bottom: 10%;
 
         div.modal-poke {
             display: flex;
@@ -375,6 +376,10 @@ div.container {
                                 font-size: 14px;
                                 font-weight: 600;
                                 color: #080808;
+
+                                &::first-letter {
+                                    text-transform: uppercase;
+                                }
                             }
             
                             progress {

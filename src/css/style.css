@@ -228,6 +228,7 @@ div.container div.info-poke {
   /* display: flex; */
   justify-content: center;
   align-items: center;
+  padding-bottom: 10%;
 }
 div.container div.info-poke div.modal-poke {
   display: flex;
@@ -345,6 +346,9 @@ div.container div.info-poke div.modal-poke div.body-modal div.body-modal-interno
   font-size: 14px;
   font-weight: 600;
   color: #080808;
+}
+div.container div.info-poke div.modal-poke div.body-modal div.body-modal-interno div.status-info div p::first-letter {
+  text-transform: uppercase;
 }
 div.container div.info-poke div.modal-poke div.body-modal div.body-modal-interno div.status-info div progress {
   width: 60%;
