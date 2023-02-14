@@ -18,9 +18,21 @@ Pokedex desenvolvida com uso de API-REST
   GET /api/v2/
 ```
 
+#### Retorna todos os tipos de pokemons
+
+```http
+  GET /api/v2/type/
+```
+
+#### Retorna todos os tipos de pokemons
+
+```http
+  GET /api/v2/type/${id}/
+```
+
 | Parâmetro   | Tipo       | Descrição                           |
 | :---------- | :--------- | :---------------------------------- |
-| `api_key` | `string` | **Obrigatório**. A chave da sua API |
+| `id` | `string` | **Obrigatório**. O ID do tipo que você quer |
 
 #### Retorna array de pokemons
 
@@ -36,7 +48,7 @@ Pokedex desenvolvida com uso de API-REST
 
 | Parâmetro   | Tipo       | Descrição                                   |
 | :---------- | :--------- | :------------------------------------------ |
-| `id`      | `string` | **Obrigatório**. O ID do item que você quer |
+| `id`      | `string` | **Obrigatório**. O ID do pokemon que você quer |
 
 
 
@@ -104,9 +116,4 @@ Instale as dependências
 ```
 
 
-
-
-## Screenshots
-
-![App Screenshot]('./src/image/Capturar.PNG')
 
