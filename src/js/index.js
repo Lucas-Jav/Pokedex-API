@@ -48,8 +48,8 @@ const searchPoke = document.querySelector('.search__button');
 const inputSearch = document.querySelector('.search__input');
 
 window.onload = searchPoke.addEventListener('click', async () => {
-    if (inputSearch.value !== '' && inputSearch.value <= 1279 || typeof inputSearch.value === 'string') {
-        const url = `https://pokeapi.co/api/v2/pokemon/${inputSearch.value}/`;
+    if (inputSearch.value !== '' &&  typeof inputSearch.value === 'string') {
+        const url = `https://pokeapi.co/api/v2/pokemon/${inputSearch.value.toLowerCase()}/`;
         const API = await fetch(url).then((res) => res.json());
         inputSearch.value = '';
         return generateModal(API);
@@ -57,7 +57,7 @@ window.onload = searchPoke.addEventListener('click', async () => {
 });
 
 window.onload = inputSearch.addEventListener('keypress', async (e) => {
-    if (e.key === 'Enter' && inputSearch.value !== '' && inputSearch.value <= 1279 || typeof inputSearch.value === 'string') {
+    if (e.key === 'Enter' && inputSearch.value !== '' &&  typeof inputSearch.value === 'string') {
         const url = `https://pokeapi.co/api/v2/pokemon/${inputSearch.value.toLowerCase()}/`;
         const API = await fetch(url).then((res) => res.json());
         inputSearch.value = '';
