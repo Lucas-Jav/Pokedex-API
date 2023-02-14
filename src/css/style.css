@@ -141,24 +141,27 @@ section.hero-section-2 {
   height: auto;
   background-color: #EFF3F6;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   flex-wrap: wrap;
   padding: 50px;
   gap: 5px;
 }
-section.hero-section-2 button {
+section.hero-section-2 label {
+  font-size: 22px;
+  font-weight: 600;
+  border-radius: 5px;
+  padding: 10px;
+}
+section.hero-section-2 select {
   padding: 10px;
   cursor: pointer;
   font-size: 18px;
   font-weight: 600;
   border-radius: 5px;
+  border: 1px solid #ccc;
 }
-section.hero-section-2 button::first-letter {
+section.hero-section-2 select option::first-letter {
   text-transform: uppercase;
-}
-section.hero-section-2 .all {
-  background-color: #000;
-  color: #fff;
 }
 
 section.teste-pokemons {

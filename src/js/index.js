@@ -60,6 +60,7 @@ inputSearch.addEventListener('keypress', async (e) => {
         const url = `https://pokeapi.co/api/v2/pokemon/${inputSearch.value}/`;
         const API = await fetch(url).then((res) => res.json());
         inputSearch.value = '';
+        inputSearch.disabled = true;
         return generateModal(API);
     };
 });
@@ -71,18 +72,5 @@ async function fetchTypes() {
     return generateBtn(API);
 }
 
-document.querySelector('.all').addEventListener('click', async () => {
-    const buttons = document.querySelectorAll('.poke-card')
-    buttons.forEach(rej => rej.remove());
-    
-    let a = 1;
-    let b = 12;
-
-    while (a <= b) {
-        await fetchPokeEsp(a);
-        a++
-    };
-});
 
 fetchTypes()
-

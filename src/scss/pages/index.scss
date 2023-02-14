@@ -137,26 +137,31 @@ section.hero-section-2 {
     height: auto;
     background-color: #EFF3F6;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     flex-wrap: wrap;
     padding: 50px;
     gap: 5px;
+
+    label {
+        font-size: 22px;
+        font-weight: 600;
+        border-radius: 5px;
+        padding: 10px;
+    }
     
-    button {
+    select {
         padding: 10px;
         cursor: pointer;
         font-size: 18px;
         font-weight: 600;
         border-radius: 5px;
+        border: 1px solid #ccc;
 
-        &::first-letter {
-            text-transform: uppercase;
+        option {
+            &::first-letter {
+                text-transform: uppercase;
+            }
         }
-    }
-
-    .all {
-        background-color: #000;
-        color: #fff;
     }
 }
 

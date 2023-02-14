@@ -18,6 +18,7 @@ export function generateModal(api) {
     btnCloseModal.addEventListener('click', () => {
         divModal.remove();
         container.style.display = 'none';
+        document.querySelector('.search__input').disabled = false;
     });
 
     const bodyModal = document.createElement('div');
@@ -174,6 +175,7 @@ export function generateModal(api) {
         divM.append(pType, progressBar);
         divStats.appendChild(divM);
     });
+
 
     container.appendChild(divModal);
     divModal.append(btnCloseModal, bodyModal);
