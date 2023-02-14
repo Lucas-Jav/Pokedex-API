@@ -48,7 +48,7 @@ const searchPoke = document.querySelector('.search__button');
 const inputSearch = document.querySelector('.search__input');
 
 window.onload = searchPoke.addEventListener('click', async () => {
-    if (inputSearch.value !== '' && inputSearch.value <= 1279) {
+    if (inputSearch.value !== '' && inputSearch.value <= 1279 || typeof inputSearch.value === 'string') {
         const url = `https://pokeapi.co/api/v2/pokemon/${inputSearch.value}/`;
         const API = await fetch(url).then((res) => res.json());
         inputSearch.value = '';
@@ -57,8 +57,8 @@ window.onload = searchPoke.addEventListener('click', async () => {
 });
 
 window.onload = inputSearch.addEventListener('keypress', async (e) => {
-    if (e.key === 'Enter' && inputSearch.value !== '' && inputSearch.value <= 1279) {
-        const url = `https://pokeapi.co/api/v2/pokemon/${inputSearch.value}/`;
+    if (e.key === 'Enter' && inputSearch.value !== '' && inputSearch.value <= 1279 || typeof inputSearch.value === 'string') {
+        const url = `https://pokeapi.co/api/v2/pokemon/${inputSearch.value.toLowerCase()}/`;
         const API = await fetch(url).then((res) => res.json());
         inputSearch.value = '';
         inputSearch.disabled = true;
