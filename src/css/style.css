@@ -814,9 +814,10 @@ footer.hero-1 a:hover, footer.hero-1 button:hover {
   color: #ffffff;
   padding: 0.7rem 1rem;
   border-radius: 30px;
-  width: 17em;
+  width: 300px;
   transition: all ease-in-out 0.5s;
   margin-right: -2rem;
+  z-index: 1;
 }
 
 .search__input:hover,
