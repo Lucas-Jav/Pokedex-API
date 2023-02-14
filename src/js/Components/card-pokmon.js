@@ -3,7 +3,7 @@ import { fetchPokeModal } from "./modal-poke.js";
 async function newCard(objct) {
 
     const button = document.createElement('button');
-    button.classList.add('poke-card');
+    button.classList.add('poke-card', `sp-${objct.types[0].type.name}`);
     button.id = `pokemon-${objct.id}`;
     button.dataset.pokeId = objct.id;
 

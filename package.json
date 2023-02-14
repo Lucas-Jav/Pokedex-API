@@ -4,8 +4,13 @@
   "description": "Pokedex API",
   "main": "index.js",
   "scripts": {
-    "scss": "sass --watch src/scss/style.scss:src/css/style.css"
+    "scss": "sass --watch src/scss/style.scss:src/css/style.css",
+    "weppk": "webpack"
   },
   "author": "Lucas Oliveira",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
+  }
 }

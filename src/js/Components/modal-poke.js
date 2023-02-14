@@ -10,7 +10,7 @@ export function generateModal(api) {
     const rest = api;
 
     const divModal = document.createElement('div');
-    divModal.classList.add('modal-poke');
+    divModal.classList.add('modal-poke', 'fadein');
     divModal.setAttribute.modalPoke = rest.id;
 
     const btnCloseModal = document.createElement('button');
@@ -91,8 +91,6 @@ export function generateModal(api) {
     })
 
 
-    
-
     const divEstt = document.createElement('div');
     divEstt.classList.add('more-infos');
 
@@ -168,6 +166,7 @@ export function generateModal(api) {
         pType.textContent = i.stat.name;
 
         const progressBar = document.createElement('progress');
+        progressBar.classList.toggle(`sc-${rest.types[0].type.name}`);
         progressBar.max = '100';
         progressBar.value = i.base_stat;
         progressBar.textContent = i.base_stat;
@@ -176,9 +175,42 @@ export function generateModal(api) {
         divStats.appendChild(divM);
     });
 
+    const divButtonsPreview = document.createElement('div');
+    divButtonsPreview.classList.add('buttons')
 
+    const btnBack = document.createElement('button');
+    btnBack.dataset.pokeId = rest.id;
+    btnBack.textContent = 'Back';
+
+    const btnNext = document.createElement('button');
+    btnNext.dataset.pokeId = rest.id;
+    btnNext.textContent = 'Next';
+
+    btnBack.addEventListener('click', (e) => {
+        let numberPk = parseFloat(e.currentTarget.dataset.pokeId )- 1;
+        if (numberPk >= 1) {
+            divModal.classList.remove('fadein')
+            divModal.classList.add('easeOut');
+            setTimeout(() => {
+                divModal.remove()
+                fetchPokeModal(numberPk);
+            }, 300);
+        };
+    });
+
+    btnNext.addEventListener('click', (e) => {
+        let numberPk = parseFloat(e.currentTarget.dataset.pokeId )+ 1;
+        divModal.classList.remove('fadein', 'easeOut')
+        divModal.classList.add('easeOut');
+        setTimeout(() => {
+            divModal.remove()
+            fetchPokeModal(numberPk);
+        }, 300);
+    });
+
+    
     container.appendChild(divModal);
-    divModal.append(btnCloseModal, bodyModal);
+    divModal.append(btnCloseModal, bodyModal, divButtonsPreview);
     bodyModal.append(headerModal, bodyInterno);
     headerModal.append(mewImg ,pokeImg);
     bodyInterno.append(descriptionModal, divEstt, divFr, divStats);
@@ -186,6 +218,7 @@ export function generateModal(api) {
     divToDesc.append(spanNumber, h1Name);
     divEstt.append(divHeight, divWeight, divAbilities);
     divFr.append(h2Fr, divGroupF);
+    divButtonsPreview.append(btnBack, btnNext);
 };
 
 

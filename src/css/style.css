@@ -177,7 +177,6 @@ section.teste-pokemons button.poke-card {
   width: 280px;
   padding: 10px;
   border-radius: 15px;
-  background-color: #ffffff;
   -webkit-box-shadow: 0px 10px 51px -5px rgba(183, 189, 193, 0.3);
   box-shadow: 0px 10px 51px -5px rgba(183, 189, 193, 0.3);
   display: flex;
@@ -243,7 +242,7 @@ section.teste-pokemons button.poke-card div.body-poke-card {
 section.teste-pokemons button.poke-card div.body-poke-card div.rec-card span {
   font-size: 14px;
   font-weight: 900;
-  color: #727272;
+  opacity: 0.7;
 }
 section.teste-pokemons button.poke-card div.body-poke-card div.rec-card h1 {
   font-size: 18px;
@@ -279,15 +278,6 @@ div.container div.info-poke div.modal-poke {
   flex-direction: column;
   align-items: end;
   gap: 5px;
-  animation: fadein 1s forwards;
-}
-@keyframes fadein {
-  0% {
-    transform: translateY(800px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
 }
 div.container div.info-poke div.modal-poke button {
   width: 20px;
@@ -405,7 +395,6 @@ div.container div.info-poke div.modal-poke div.body-modal div.body-modal-interno
 }
 div.container div.info-poke div.modal-poke div.body-modal div.body-modal-interno div.status-info div progress {
   width: 60%;
-  accent-color: #3A65BD;
 }
 @media (max-width: 382px) {
   div.container div.info-poke div.modal-poke div.body-modal div.body-modal-interno div.status-info div progress {
@@ -468,6 +457,17 @@ div.container div.info-poke div.modal-poke div.fraquezas div span {
 div.container div.info-poke div.modal-poke div.fraquezas div span::first-letter {
   text-transform: uppercase;
 }
+div.container div.info-poke div.modal-poke div.buttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+div.container div.info-poke div.modal-poke div.buttons button {
+  width: 45%;
+  background-color: #3A65BD;
+  color: #fff;
+}
 
 section.tobutton {
   width: 100%;
@@ -510,6 +510,30 @@ footer.hero-1 a, footer.hero-1 button {
 }
 footer.hero-1 a:hover, footer.hero-1 button:hover {
   text-decoration: underline;
+}
+
+.fadein {
+  animation: fadein 0.5s forwards;
+}
+@keyframes fadein {
+  0% {
+    transform: translateY(800px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.easeOut {
+  animation: back 0.5s forwards;
+}
+@keyframes back {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-1000px);
+  }
 }
 
 @media (max-width: 550px) {
@@ -701,6 +725,78 @@ footer.hero-1 a:hover, footer.hero-1 button:hover {
 .sp-water {
   background-color: rgba(79, 120, 190, 0.1);
   color: #4F77BE !important;
+}
+
+.sc-bug {
+  accent-color: #9BBA48 !important;
+}
+
+.sc-dark {
+  accent-color: #595761 !important;
+}
+
+.sc-dragon {
+  accent-color: #2C6AC1 !important;
+}
+
+.sc-electric {
+  accent-color: #D4BC34 !important;
+}
+
+.sc-fairy {
+  accent-color: #E296E1 !important;
+}
+
+.sc-fighting {
+  accent-color: #C44D61 !important;
+}
+
+.sc-fire {
+  accent-color: #E96303 !important;
+}
+
+.sc-flying {
+  accent-color: #758CBD !important;
+}
+
+.sc-ghost {
+  accent-color: #616EB7 !important;
+}
+
+.sc-grass {
+  accent-color: #73B861 !important;
+}
+
+.sc-ground {
+  accent-color: #CE8056 !important;
+}
+
+.sc-ice {
+  accent-color: #71BAAC !important;
+}
+
+.sc-normal {
+  accent-color: #909090 !important;
+}
+
+.sc-poison {
+  accent-color: #AC6ACA !important;
+}
+
+.sc-psychic {
+  accent-color: #EB8B85 !important;
+}
+
+.sc-rock {
+  accent-color: #84BEB3 !important;
+}
+
+.sc-steel {
+  accent-color: #6594A1 !important;
+}
+
+.sc-water {
+  accent-color: #4F77BE !important;
 }
 
 .search {

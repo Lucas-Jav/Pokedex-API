@@ -178,7 +178,6 @@ section.teste-pokemons {
         width: 280px;
         padding: 10px;
         border-radius: 15px;
-        background-color: #ffffff;
         -webkit-box-shadow: 0px 10px 51px -5px rgb(183 189 193 / 30%);
         box-shadow: 0px 10px 51px -5px rgb(183 189 193 / 30%);
         display: flex;
@@ -216,7 +215,6 @@ section.teste-pokemons {
             height: 16.5rem;
             
             &::before {
-                
                 content: "";
                 width: 16.5rem;
                 height: 16.5rem;
@@ -253,7 +251,7 @@ section.teste-pokemons {
                 span {
                     font-size: 14px;
                     font-weight: 900;
-                    color: #727272;
+                    opacity: 0.7;
                 }
                 h1 {
                     font-size: 18px;
@@ -294,17 +292,6 @@ div.container {
             flex-direction: column;
             align-items: end;
             gap: 5px;
-            animation: fadein 1s forwards;
-
-            @keyframes fadein {
-                0% {
-                    transform: translateY(800px);
-                }
-                100%{
-                    transform: translateY(0px);
-                }
-            }
-            
 
             button {
                 width: 20px;
@@ -440,7 +427,6 @@ div.container {
             
                             progress {
                                 width: 60%;
-                                accent-color: #3A65BD;
             
                                 @media (max-width: 382px) {
                                     width: 100%;
@@ -507,6 +493,18 @@ div.container {
                     }
                 }
             }
+
+            div.buttons {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                gap: 10px;
+                button {
+                    width: 45%;
+                    background-color: #3A65BD;
+                    color: #fff;
+                }
+            }
         }
     }
 }
@@ -557,6 +555,34 @@ footer.hero-1 {
         }
     }
 }
+
+.fadein {
+    animation: fadein 0.5s forwards;
+
+    @keyframes fadein {
+        0% {
+            transform: translateY(800px);
+        }
+        100%{
+            transform: translateY(0px);
+        }
+    }
+}
+
+.easeOut {
+    animation: back 0.5s forwards;
+
+    @keyframes back {
+        0% {
+            transform: translateY(0px);
+        }
+        100% {
+            transform: translateY(-1000px);
+        }
+    }
+}
+
+
 
 @media (max-width: 550px) {
     div.modal-poke {

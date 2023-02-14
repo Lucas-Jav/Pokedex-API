@@ -9,13 +9,13 @@ export async function fetchPokeEsp(id) {
     await newCard(response);
 }
 
-let a = 1
-let b = 12
+let a = 1;
+let b = 12;
 
 while (a <= b) {
     await fetchPokeEsp(a);
     a++
-}
+};
 
 const morepk = document.querySelector('#morePk');
 morepk.addEventListener('click', () => {
@@ -64,13 +64,5 @@ inputSearch.addEventListener('keypress', async (e) => {
         return generateModal(API);
     };
 });
-
-async function fetchTypes() {
-    const url = `https://pokeapi.co/api/v2/type/`;
-    const API = await fetch(url).then((res) => res.json());
     
-    return generateBtn(API);
-}
-
-
-fetchTypes()
+generateBtn();

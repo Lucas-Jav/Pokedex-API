@@ -1,21 +1,7 @@
 import { fetchPokeEsp } from "../index.js";
 
-export function generateBtn(api) {
-    let number = 1;
+export function generateBtn() {
     const select = document.querySelector('select');
-
-    api.results.forEach(item => {
-        if (item.name != 'unknown' && item.name != 'shadow') {
-            const option = document.createElement('option');
-            option.classList.add(`sp-${item.name}`);
-            option.textContent = item.name;
-            option.dataset.type = number;
-            option.value = number;
-
-            document.querySelector('select').appendChild(option);
-            number++
-        };
-    });
 
     select.addEventListener('change', async (e) => {
         const type = select.value;
