@@ -118,9 +118,14 @@ section.hero-section-1 {
   height: 30vh;
   background-color: #EFF3F6;
   display: flex;
-  justify-content: start;
+  justify-content: space-between;
   padding: 50px;
   align-items: center;
+}
+@media (max-width: 740px) {
+  section.hero-section-1 {
+    flex-direction: column;
+  }
 }
 section.hero-section-1 h2 {
   font-family: "Montserrat", sans-serif;
@@ -128,7 +133,32 @@ section.hero-section-1 h2 {
   font-size: 1.9rem;
   letter-spacing: -0.01em;
   color: #2F3133;
-  max-width: 26.5rem;
+  max-width: 27.5rem;
+  text-align: center;
+}
+
+section.hero-section-2 {
+  height: auto;
+  background-color: #EFF3F6;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 50px;
+  gap: 5px;
+}
+section.hero-section-2 button {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 5px;
+}
+section.hero-section-2 button::first-letter {
+  text-transform: uppercase;
+}
+section.hero-section-2 .all {
+  background-color: #000;
+  color: #fff;
 }
 
 section.teste-pokemons {
@@ -490,75 +520,93 @@ footer.hero-1 a:hover, footer.hero-1 button:hover {
     overflow-y: scroll;
   }
 }
-.bug::before, .bug::after {
+.bug::before,
+.bug::after {
   color: rgba(131, 158, 56, 0.2);
 }
 
-.dark::before, .dark::after {
+.dark::before,
+.dark::after {
   color: rgba(61, 60, 63, 0.2);
 }
 
-.dragon::before, .dragon::after {
+.dragon::before,
+.dragon::after {
   color: rgba(70, 105, 153, 0.2);
 }
 
-.electric::before, .electric::after {
+.electric::before,
+.electric::after {
   color: rgba(207, 190, 93, 0.2);
 }
 
-.fairy::before, .fairy::after {
+.fairy::before,
+.fairy::after {
   color: rgba(221, 138, 220, 0.2);
 }
 
-.fighting::before, .fighting::after {
+.fighting::before,
+.fighting::after {
   color: rgba(196, 77, 97, 0.2);
 }
 
-.fire::before, .fire::after {
+.fire::before,
+.fire::after {
   color: #FFEBCA;
 }
 
-.flying::before, .flying::after {
+.flying::before,
+.flying::after {
   color: rgba(158, 180, 227, 0.2);
 }
 
-.ghost::before, .ghost::after {
+.ghost::before,
+.ghost::after {
   color: rgba(97, 110, 183, 0.2);
 }
 
-.grass::before, .grass::after {
+.grass::before,
+.grass::after {
   color: #D6EBDC;
 }
 
-.ground::before, .ground::after {
+.ground::before,
+.ground::after {
   color: rgba(203, 119, 74, 0.2);
 }
 
-.ice::before, .ice::after {
+.ice::before,
+.ice::after {
   color: rgba(124, 197, 182, 0.2);
 }
 
-.normal::before, .normal::after {
+.normal::before,
+.normal::after {
   color: rgba(141, 141, 141, 0.2);
 }
 
-.poison::before, .poison::after {
+.poison::before,
+.poison::after {
   color: rgba(172, 106, 202, 0.2);
 }
 
-.psychic::before, .psychic::after {
+.psychic::before,
+.psychic::after {
   color: rgba(235, 140, 133, 0.2);
 }
 
-.rock::before, .rock::after {
+.rock::before,
+.rock::after {
   color: rgba(134, 203, 190, 0.2);
 }
 
-.steel::before, .steel::after {
+.steel::before,
+.steel::after {
   color: rgba(101, 148, 161, 0.2);
 }
 
-.water::before, .water::after {
+.water::before,
+.water::after {
   color: #DFECF5;
 }
 
@@ -650,6 +698,62 @@ footer.hero-1 a:hover, footer.hero-1 button:hover {
 .sp-water {
   background-color: rgba(79, 120, 190, 0.1);
   color: #4F77BE !important;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.search__input {
+  font-family: inherit;
+  font-size: inherit;
+  background-color: #2F3133;
+  border: none;
+  color: #ffffff;
+  padding: 0.7rem 1rem;
+  border-radius: 30px;
+  width: 17em;
+  transition: all ease-in-out 0.5s;
+  margin-right: -2rem;
+}
+
+.search__input:hover,
+.search__input:focus {
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.0745098039);
+}
+
+.search__input:focus {
+  outline: none;
+  background-color: #4F77BE;
+}
+
+.search__input::-webkit-input-placeholder {
+  font-weight: 100;
+  color: #ccc;
+}
+
+.search__input:focus + .search__button {
+  background-color: transparent;
+}
+
+.search__button {
+  border: none;
+  background-color: transparent;
+  margin-top: 0.1em;
+  z-index: 6;
+}
+
+.search__button:hover {
+  cursor: pointer;
+}
+
+.search__icon {
+  height: 1.3em;
+  width: 1.3em;
+  fill: #b4b4b4;
 }
 
 @media (max-width: 1880px) {

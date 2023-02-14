@@ -16,8 +16,8 @@ async function newCard(objct) {
     header.classList.add('header-poke-card', objct.types[0].type.name);
 
     const img = document.createElement('img');
-    img.width = '130';
-    img.src = `https://raw.githubusercontent.com/PokeAPI//sprites/master/sprites/pokemon/other/dream-world/${objct.id}.svg`;
+    img.width = '200';
+    img.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${objct.id}.png`;
     img.alt = `img-${objct.name}`
     img.loading = 'lazy';
 
@@ -27,8 +27,8 @@ async function newCard(objct) {
     });
 
     button.addEventListener('mouseleave', () => {
-        img.width = '130';
-        img.src = `https://raw.githubusercontent.com/PokeAPI//sprites/master/sprites/pokemon/other/dream-world/${objct.id}.svg`;
+        img.width = '200';
+        img.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${objct.id}.png`;
     });
 
     const body = document.createElement('div');

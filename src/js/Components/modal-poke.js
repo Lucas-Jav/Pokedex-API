@@ -4,7 +4,7 @@ export async function fetchPokeModal(id) {
     return generateModal(API);
 }
 
-function generateModal(api) {
+export function generateModal(api) {
     const container = document.querySelector('#pokeid');
     container.style.display = 'flex';
     const rest = api;
@@ -18,7 +18,7 @@ function generateModal(api) {
     btnCloseModal.addEventListener('click', () => {
         divModal.remove();
         container.style.display = 'none';
-    })
+    });
 
     const bodyModal = document.createElement('div');
     bodyModal.classList.add('body-modal');
@@ -185,4 +185,5 @@ function generateModal(api) {
     divEstt.append(divHeight, divWeight, divAbilities);
     divFr.append(h2Fr, divGroupF);
 };
+
 

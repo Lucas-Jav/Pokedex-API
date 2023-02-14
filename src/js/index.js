@@ -1,6 +1,8 @@
 import { newCard } from "./Components/card-pokmon.js";
+import { generateBtn } from "./Components/generate-btn.js";
+import { generateModal } from "./Components/modal-poke.js";
 
-async function fetchPokeEsp( id) {
+export async function fetchPokeEsp(id) {
     const APIpoke = `https://pokeapi.co/api/v2/pokemon/${id}/`;
     const response = await fetch(APIpoke).then(res => res.json());
 
@@ -40,4 +42,47 @@ document.querySelector('#backtotop').addEventListener('click', () => {
         behavior: 'smooth'
     });
 });
+
+const searchPoke = document.querySelector('.search__button');
+const inputSearch = document.querySelector('.search__input');
+
+searchPoke.addEventListener('click', async () => {
+    if (inputSearch.value !== '' && inputSearch.value <= 1279) {
+        const url = `https://pokeapi.co/api/v2/pokemon/${inputSearch.value}/`;
+        const API = await fetch(url).then((res) => res.json());
+        inputSearch.value = '';
+        return generateModal(API);
+    };
+});
+
+inputSearch.addEventListener('keypress', async (e) => {
+    if (e.key === 'Enter' && inputSearch.value !== '' && inputSearch.value <= 1279) {
+        const url = `https://pokeapi.co/api/v2/pokemon/${inputSearch.value}/`;
+        const API = await fetch(url).then((res) => res.json());
+        inputSearch.value = '';
+        return generateModal(API);
+    };
+});
+
+async function fetchTypes() {
+    const url = `https://pokeapi.co/api/v2/type/`;
+    const API = await fetch(url).then((res) => res.json());
+    
+    return generateBtn(API);
+}
+
+document.querySelector('.all').addEventListener('click', async () => {
+    const buttons = document.querySelectorAll('.poke-card')
+    buttons.forEach(rej => rej.remove());
+    
+    let a = 1;
+    let b = 12;
+
+    while (a <= b) {
+        await fetchPokeEsp(a);
+        a++
+    };
+});
+
+fetchTypes()
 

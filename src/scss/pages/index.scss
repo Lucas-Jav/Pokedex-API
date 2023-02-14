@@ -113,9 +113,13 @@ section.hero-section-1 {
     height: 30vh;
     background-color: #EFF3F6;
     display: flex;
-    justify-content: start;
+    justify-content: space-between;
     padding: 50px;
     align-items: center;
+
+    @media (max-width: 740px) {
+        flex-direction: column;
+    }
     
         h2 {
             
@@ -124,8 +128,36 @@ section.hero-section-1 {
             font-size: 1.9rem;
             letter-spacing: -0.01em;
             color: $color-txt;
-            max-width: 26.5rem;
+            max-width: 27.5rem;
+            text-align: center;
         }
+}
+
+section.hero-section-2 {
+    height: auto;
+    background-color: #EFF3F6;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 50px;
+    gap: 5px;
+    
+    button {
+        padding: 10px;
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: 600;
+        border-radius: 5px;
+
+        &::first-letter {
+            text-transform: uppercase;
+        }
+    }
+
+    .all {
+        background-color: #000;
+        color: #fff;
+    }
 }
 
 section.teste-pokemons {
@@ -349,8 +381,6 @@ div.container {
                                     margin-left: 5px;
                                     border-radius: 3px;
                                     padding: 5px;
-                                    
-                                    
 
                                     &::first-letter {
                                         text-transform: uppercase;
