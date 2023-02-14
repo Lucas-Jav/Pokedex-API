@@ -2,15 +2,10 @@
   "name": "pokedex",
   "version": "1.0.0",
   "description": "Pokedex API",
-  "main": "index.js",
+  "main": "./src/js/index.js",
   "scripts": {
-    "scss": "sass --watch src/scss/style.scss:src/css/style.css",
-    "weppk": "webpack"
+    "scss": "sass --watch src/scss/style.scss:src/css/style.css"
   },
   "author": "Lucas Oliveira",
-  "license": "ISC",
-  "dependencies": {
-    "webpack": "^5.75.0",
-    "webpack-cli": "^5.0.1"
-  }
+  "license": "ISC"
 }

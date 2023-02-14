@@ -2,6 +2,7 @@ import { newCard } from "./Components/card-pokmon.js";
 import { generateBtn } from "./Components/generate-btn.js";
 import { generateModal } from "./Components/modal-poke.js";
 
+
 export async function fetchPokeEsp(id) {
     const APIpoke = `https://pokeapi.co/api/v2/pokemon/${id}/`;
     const response = await fetch(APIpoke).then(res => res.json());
