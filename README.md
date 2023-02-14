@@ -4,6 +4,12 @@
 Pokedex desenvolvida com uso de API-REST
 
 
+## Total de horas do projeto
+
+[Horas e outros](https://wakatime.com/@Luk1/projects/yowegvqdwr?start=2023-02-08&end=2023-02-14)
+
+![wakatime](https://wakatime.com/badge/user/21320da2-9a01-4626-8cfc-a2192d3d1e0e/project/3bbb5c1d-081e-429f-9ea6-c7aefdd2ab79.svg)
+
 ## Referência
 
  - [Pokedex-API](https://pokeapi.co/)
