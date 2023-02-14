@@ -153,12 +153,14 @@ section.hero-section-2 label {
   padding: 10px;
 }
 section.hero-section-2 select {
-  padding: 10px;
+  width: 130px;
+  padding: 5px;
   cursor: pointer;
   font-size: 18px;
   font-weight: 600;
   border-radius: 5px;
   border: 1px solid #ccc;
+  z-index: 1;
 }
 section.hero-section-2 select option::first-letter {
   text-transform: uppercase;
