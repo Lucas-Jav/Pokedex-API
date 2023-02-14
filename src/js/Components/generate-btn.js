@@ -7,7 +7,7 @@ export function generateBtn(api) {
     api.results.forEach(item => {
         if (item.name != 'unknown' && item.name != 'shadow') {
             const option = document.createElement('option');
-            option.classList.add(`sp-${item.name}`)
+            option.classList.add(`sp-${item.name}`);
             option.textContent = item.name;
             option.dataset.type = number;
             option.value = number;
@@ -21,7 +21,7 @@ export function generateBtn(api) {
         const type = select.value;
 
         if (select.value === 'none') {
-            const buttons = document.querySelectorAll('.poke-card')
+            const buttons = document.querySelectorAll('.poke-card');
             buttons.forEach(rej => rej.remove());
             
             let a = 1;
@@ -35,7 +35,7 @@ export function generateBtn(api) {
             const classe = document.querySelector(`option[value="${type}"]`).classList[0];
             select.classList.remove(select.classList[0])
             select.classList.add(classe);
-            const url = `https://pokeapi.co/api/v2/type/${type}/`
+            const url = `https://pokeapi.co/api/v2/type/${type}/`;
             const API = await fetch(url).then((res) => res.json());
             
             API.pokemon.forEach((rest) => {
@@ -44,7 +44,7 @@ export function generateBtn(api) {
     
             const buttons = document.querySelectorAll('.poke-card');
             buttons.forEach(rej => rej.remove());
-        }
+        };
     });
 };
 

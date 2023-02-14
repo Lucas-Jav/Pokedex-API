@@ -18,7 +18,7 @@ async function newCard(objct) {
     const img = document.createElement('img');
     img.width = '200';
     img.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${objct.id}.png`;
-    img.alt = `img-${objct.name}`
+    img.alt = `img-${objct.name}`;
     img.loading = 'lazy';
 
     button.addEventListener('mouseenter', () => {
@@ -51,7 +51,7 @@ async function newCard(objct) {
     objct.types.forEach(i => {
         const typeImg = document.createElement('img');
         typeImg.src = `./src/image/types/${i.type.name}.svg`;
-        typeImg.alt = `icon-${i.type.name}`
+        typeImg.alt = `icon-${i.type.name}`;
         typeImg.width = '20';
         typeImg.loading = 'lazy';
 
@@ -65,4 +65,4 @@ async function newCard(objct) {
     descriptionPoke.append(span, h2);
 };
 
-export {newCard}
+export {newCard};
