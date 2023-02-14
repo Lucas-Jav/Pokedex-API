@@ -161,6 +161,7 @@ section.hero-section-2 {
 
 
         option {
+            z-index: 2;
             &::first-letter {
                 text-transform: uppercase;
             }

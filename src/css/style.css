@@ -162,6 +162,9 @@ section.hero-section-2 select {
   border: 1px solid #ccc;
   z-index: 1;
 }
+section.hero-section-2 select option {
+  z-index: 2;
+}
 section.hero-section-2 select option::first-letter {
   text-transform: uppercase;
 }
