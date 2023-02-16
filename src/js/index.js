@@ -52,6 +52,7 @@ window.onload = searchPoke.addEventListener('click', async () => {
         const url = `https://pokeapi.co/api/v2/pokemon/${inputSearch.value.toLowerCase()}/`;
         const API = await fetch(url).then((res) => res.json());
         inputSearch.value = '';
+        inputSearch.disabled = true;
         return generateModal(API);
     };
 });

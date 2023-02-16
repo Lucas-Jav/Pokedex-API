@@ -2,13 +2,13 @@ import { fetchPokeEsp } from "../index.js";
 
 export function generateBtn() {
     const select = document.querySelector('select');
+    const sectionPokeCards = document.querySelector('.teste-pokemons');
 
     select.addEventListener('change', async (e) => {
         const type = select.value;
 
         if (select.value === 'none') {
-            const buttons = document.querySelectorAll('.poke-card');
-            buttons.forEach(rej => rej.remove());
+            sectionPokeCards.innerHTML = '';
             
             let a = 1;
             let b = 12;
@@ -18,6 +18,8 @@ export function generateBtn() {
                 a++
             };
         } else {
+            sectionPokeCards.innerHTML = '';
+            
             const classe = document.querySelector(`option[value="${type}"]`).classList[0];
             select.classList.remove(select.classList[0])
             select.classList.add(classe);
@@ -27,9 +29,6 @@ export function generateBtn() {
             API.pokemon.forEach((rest) => {
                 fetchPokeEsp(rest.pokemon.name);
             });
-    
-            const buttons = document.querySelectorAll('.poke-card');
-            buttons.forEach(rej => rej.remove());
         };
     });
 };

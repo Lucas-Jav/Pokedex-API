@@ -117,7 +117,7 @@ export function generateModal(api) {
     const pAbilities = document.createElement('p');
     pAbilities.textContent = 'Abilities';
     const spanAbilities = document.createElement('span');
-    spanAbilities.textContent = rest.abilities[0].ability.name
+    spanAbilities.textContent = rest.abilities[0].ability.name;
     divAbilities.append(pAbilities, spanAbilities);
         
     const divFr = document.createElement('div');
@@ -176,7 +176,7 @@ export function generateModal(api) {
     });
 
     const divButtonsPreview = document.createElement('div');
-    divButtonsPreview.classList.add('buttons')
+    divButtonsPreview.classList.add('buttons');
 
     const btnBack = document.createElement('button');
     btnBack.dataset.pokeId = rest.id;
@@ -200,10 +200,10 @@ export function generateModal(api) {
 
     btnNext.addEventListener('click', (e) => {
         let numberPk = parseFloat(e.currentTarget.dataset.pokeId )+ 1;
-        divModal.classList.remove('fadein', 'easeOut')
+        divModal.classList.remove('fadein', 'easeOut');
         divModal.classList.add('easeOut');
         setTimeout(() => {
-            divModal.remove()
+            divModal.remove();
             fetchPokeModal(numberPk);
         }, 300);
     });
